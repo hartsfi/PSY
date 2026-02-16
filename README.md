@@ -20,12 +20,17 @@ Canbet introduces a reward-based system that:
 - Increases engagement with coursework
 
 ---
-
+Canvas LMS REST API​
 # Tech Stack
 
 ## Frontend
+TypeScript​
+CSS​
+HTML​
+React​
 
 ## Backend
+Node.js​
 
 ## Integration
 - Canvas LMS REST API
