@@ -30,7 +30,7 @@ Canvas LMS REST API​
 - React​
 
 ## Backend
-Node.js​
+- Node.js​
 
 ## Integration
 - Canvas LMS REST API
