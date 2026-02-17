@@ -24,13 +24,13 @@ Canvas LMS REST API​
 # Tech Stack
 
 ## Frontend
-- TypeScript​
 - CSS​
 - HTML​
 - React​
 
 ## Backend
 - Node.js​
+- Python / C++
 
 ## Integration
 - Canvas LMS REST API
