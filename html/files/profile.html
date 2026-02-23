@@ -18,6 +18,16 @@ body {
   position: relative;
 }
 
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -webkit-image-rendering: pixelated;
+}
+
 /* PROFILE CARD — green rounded rectangle matching wireframe */
 .profile-card {
   position: absolute;
@@ -90,6 +100,8 @@ body {
 </style>
 </head>
 <body>
+
+<img class="bg-image" src="images/profilebg.png" alt="">
 
 <div class="profile-card">
   <div class="avatar-wrap">

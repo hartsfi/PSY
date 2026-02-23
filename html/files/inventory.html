@@ -18,6 +18,16 @@ body {
   position: relative;
 }
 
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -webkit-image-rendering: pixelated;
+}
+
 /* MAIN LAYOUT — matches wireframe: large blue area left-center, dark panel right */
 .inv-layout {
   position: absolute;
@@ -51,7 +61,7 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.15s;
-  font-size: 1.2rem;
+  font-size: 4rem;
 }
 .inv-slot:hover {
   background: rgba(255,255,255,0.3);
@@ -74,7 +84,7 @@ body {
 }
 
 .sidebar-title {
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   color: #aaa;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -88,19 +98,19 @@ body {
   gap: 6px;
   flex: 1;
 }
-.sel-icon { font-size: 2.5rem; text-align: center; }
+.sel-icon { font-size: 4rem; text-align: center; }
 .sel-name {
-  font-size: 0.35rem;
+  font-size: 0.7rem;
   color: #ddd;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.8;
 }
 .sel-rarity {
-  font-size: 0.3rem;
+  font-size: 0.65rem;
   text-align: center;
   letter-spacing: 1px;
-  padding: 3px;
+  padding: 6px;
   border: 1px solid #555;
   margin-top: auto;
 }
@@ -127,6 +137,8 @@ body {
 </style>
 </head>
 <body>
+
+<img class="bg-image" src="images/inventorybg.png" alt="">
 
 <div class="inv-layout">
   <div class="inv-grid-area">

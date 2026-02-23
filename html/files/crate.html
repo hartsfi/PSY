@@ -18,6 +18,16 @@ body {
   position: relative;
 }
 
+.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -webkit-image-rendering: pixelated;
+}
+
 /* CRATE DISPLAY AREA */
 .crate-area {
   position: absolute;
@@ -148,6 +158,8 @@ body {
 </style>
 </head>
 <body>
+
+<img class="bg-image" src="images/cratebg.png" alt="">
 
 <div class="crate-area">
   <div class="crate-box" onclick="openCrate()">
