@@ -29,12 +29,15 @@ body {
 .topnav {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* logo on left, links on right */
   align-items: center;
   padding: 10px 20px;
   position: absolute;
   top: 0;
   z-index: 10;
+}
+.logo {
+  height: 40px;
 }
 .nav-link {
   font-size: 0.45rem;
@@ -63,62 +66,71 @@ body {
   display: block;
   text-decoration: none;
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.65rem;
+  /* doubled overall button scale */
+  font-size: 0.975rem; /* 25% smaller than doubled value */
   color: #1a1a1a;
   letter-spacing: 1px;
   text-align: center;
-  padding: 12px 30px;
+  padding: 18px 45px;
   border-radius: 50px;
-  background: #5dba6e;
+  /* dark purple buttons */
+  background: #5d3a9b;
   border: none;
   cursor: pointer;
   transition: all 0.15s;
-  min-width: 200px;
+  min-width: 300px;
   text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-  box-shadow: 0 3px 0 #3a8a4a, 0 4px 8px rgba(0,0,0,0.4);
+  /* shadow for purple buttons */
+  box-shadow: 0 3px 0 #402664, 0 4px 8px rgba(0,0,0,0.4);
 }
 .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 #3a8a4a, 0 6px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 0 #402664, 0 6px 12px rgba(0,0,0,0.5);
 }
 .nav-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 1px 0 #3a8a4a;
+  box-shadow: 0 1px 0 #402664;
 }
 
 /* ROW LAYOUT */
 .row {
   display: flex;
-  gap: 20px;
+  gap: 30px; /* adjusted for slightly smaller buttons */
   align-items: center;
   justify-content: center;
 }
 
-/* Diamond shape for Crates */
+/* Diamond shape for Crates (now twice as big) */
 .diamond-btn {
-  width: 100px; height: 100px;
-  background: #4abf7a;
+  /* another 25% up (≈187.5px, rounded to 188px) */
+  width: 188px; height: 188px;
+  background: #5d3a9b;
   transform: rotate(45deg);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 3px 3px 0 #2a8a4a, 4px 5px 10px rgba(0,0,0,0.5);
+  /* diamond shadow adapted to purple tone */
+  box-shadow: 3px 3px 0 #402664, 4px 5px 10px rgba(0,0,0,0.5);
   transition: all 0.15s;
-  border: 2px solid #3aaa6a;
+  /* border for lavender diamond */
+  border: 2px solid #8e79a0;
 }
 .diamond-btn:hover {
   transform: rotate(45deg) scale(1.05);
-  box-shadow: 5px 5px 0 #2a8a4a;
+  box-shadow: 5px 5px 0 #402664;
 }
 .diamond-btn:active {
   transform: rotate(45deg) scale(0.97);
+  /* active shadow color update */
+  box-shadow: 3px 3px 0 #402664;
 }
 .diamond-inner {
   transform: rotate(-45deg);
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.5rem;
+  /* 87.5% larger than original 0.5rem */
+  font-size: 0.875rem;
   color: #1a1a1a;
   text-align: center;
   letter-spacing: 0.5px;
@@ -126,8 +138,8 @@ body {
 }
 
 .nav-btn.profile-btn {
-  background: #4abf7a;
-  box-shadow: 0 3px 0 #2a8a4a, 0 4px 8px rgba(0,0,0,0.4);
+  background: #5d3a9b;
+  box-shadow: 0 3px 0 #402664, 0 4px 8px rgba(0,0,0,0.4);
 }
 .nav-btn.profile-btn:hover {
   box-shadow: 0 5px 0 #2a8a4a, 0 6px 12px rgba(0,0,0,0.5);
@@ -139,7 +151,8 @@ body {
 
 
 <nav class="topnav">
-  <a href="home.html" class="nav-link">Home</a>
+  <a href="home.html"><img src="../images/logo.png" class="logo" alt="Logo"></a>
+  <!-- home link replaced by logo -->
 </nav>
 
 <div class="interface">

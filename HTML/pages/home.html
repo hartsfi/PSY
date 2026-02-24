@@ -49,6 +49,15 @@ body {
 }
 .nav-right:hover { text-decoration: underline; }
 
+/* links inside logo nav span */
+.nav-link {
+  font-size: 0.55rem;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-link:hover { text-decoration: underline; }
+
 /* background image removed; gradient handled via body */
 
 /* CONTENT OVERLAY */
@@ -93,8 +102,11 @@ body {
 
 
 <nav class="topnav">
-  <a href="about.html" class="nav-left">About us</a>
-  <a href="login.html" class="nav-right">Login</a>
+  <a href="home.html"><img src="../images/logo.png" class="logo" alt="Logo"></a>
+  <span>
+    <a href="about.html" class="nav-link">About us</a>
+    <a href="login.html" class="nav-link">Login</a>
+  </span>
 </nav>
 
 <div class="content">
