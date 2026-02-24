@@ -1,0 +1,22 @@
+import os
+import psycopg2 as SQL
+from dotenv import load_dotenv as env, load_dotenv
+
+load_dotenv()
+
+SQLUserPassword = os.getenv("SQLTeamUserPassword")
+
+conn = SQL.connect(
+    host="localhost",
+    database="CanbetBackend",
+    user="SQLTeam",
+    password=SQLUserPassword,
+    port=5432
+)
+
+cursor = conn.cursor()
+
+cursor.execute("SELECT version();")
+print(cursor.fetchone())
+
+conn.close()
