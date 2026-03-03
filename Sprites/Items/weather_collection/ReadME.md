@@ -1,0 +1,1 @@
+Folder for weather collection
