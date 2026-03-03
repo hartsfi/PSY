@@ -12,10 +12,16 @@ body {
   width: 100vw; height: 100vh;
   overflow: hidden;
   font-family: 'Press Start 2P', monospace;
-  background-color: #d0d0d0;
-  /* no gradient image available for login page */
+  background-color: #c8c8c8;
+  /* use the new loginbg and let CSS pixelate it */
+  background-image: url('../images/loginbg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* TOP NAV */
@@ -25,6 +31,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 12px 24px;
+  /* match other pages with a translucent nav bar */
   background: rgba(255,255,255,0.6);
   border-bottom: 1px solid #ccc;
   position: relative;
@@ -45,9 +52,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #d0d0d0;
+  /* content box now semi‑transparent so the page background can be seen */
+  background: rgba(208,208,208,0.85);
   padding: 2rem;
   gap: 2rem;
+  backdrop-filter: blur(4px);
 }
 
 .form-group {
@@ -106,7 +115,7 @@ body {
 <body>
 
 <nav class="topnav">
-  <a href="home.html"><img src="../images/logo.png" class="logo" alt="Logo"></a>
+  <a href="home.html"><img src="../images/canBet symbol sym..png" class="logo" alt="Logo"></a>
 </nav>
 
 <div class="page-content">
