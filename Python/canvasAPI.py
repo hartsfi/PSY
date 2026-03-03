@@ -1,7 +1,9 @@
 import requests
+import csv
+import os
  
 CANVAS_DOMAIN = "https://ohio.instructure.com"
-TOKEN = "24063~4nM6zkZeQ3vtrLkuNNc2rDFtKfee2aNCY2YMCkYQUHtrHPKkGxcDTVNGwazMEzmB"
+TOKEN = os.getenv("CANVAS_TOKEN")
  
 headers = {
     "Authorization": f"Bearer {TOKEN}"
@@ -15,7 +17,7 @@ response = requests.get(
 user_data = response.json()
  
 response = requests.get(
-    f"{CANVAS_DOMAIN}/api/v1/courses",
+    f"{CANVAS_DOMAIN}/api/v1/courses?per_page=100",
     headers=headers
 )
  
@@ -32,4 +34,24 @@ for course in courses:
     response = requests.get(url, headers=headers)
  
     data = response.json()
-    print(data)
+    #instead of printing the data, we will write it to a csv file
+    if "name" in course:
+        with open(f"{course["name"]}_submissions.csv", mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Submission Date"])
+            for submission in data:
+                if "submitted_at" in submission:
+                    submission_date = submission["submitted_at"] 
+                else:
+                    submission_date = "N/A"
+                writer.writerow([submission_date])
+    else:
+        with open(f"course_{COURSE_ID}_submissions.csv", mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Submission Date"])
+            for submission in data:
+                if "submitted_at" in submission:
+                    submission_date = submission["submitted_at"] 
+                else:
+                    submission_date = "N/A"
+                writer.writerow([submission_date])
