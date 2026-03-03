@@ -1,7 +1,7 @@
 import requests
  
 CANVAS_DOMAIN = "https://ohio.instructure.com"
-TOKEN = "24063~4nM6zkZeQ3vtrLkuNNc2rDFtKfee2aNCY2YMCkYQUHtrHPKkGxcDTVNGwazMEzmB"
+TOKEN = "24063~CNm8DUMF86TR9UMQKEXVeV76BwFz4DkFQ7vTeGf6PhFFQ8ZJvvDyHyGtrBPnCtNJ"
  
 headers = {
     "Authorization": f"Bearer {TOKEN}"
@@ -33,3 +33,4 @@ for course in courses:
  
     data = response.json()
     print(data)
+    print()
